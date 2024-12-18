@@ -71,6 +71,6 @@ function checkNote() {
            resultElement.innerHTML = `Dominant Color: <span style="background-color: ${dominantColor}; color: white; padding: 5px;">${dominantColor}</span>`;
        };
    };
-
+console.log("hi")
    reader.readAsDataURL(file); // Read the image file as a data URL
 }
