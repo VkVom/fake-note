@@ -93,8 +93,12 @@ button:active{
 
 #c2{
     top: 100%;
-    right: 7%;
+    right: 3.8%;
     height: 100px;
+    /* padding: 10px 10px; */
+}
+#c2 a{
+    padding: 10px 50px;
 }
 
 .collec a{
