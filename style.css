@@ -157,3 +157,24 @@ span{
     font-family: monospace;
     text-decoration: underline;
 }
+#ld{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 20px    solid rgb(162, 165, 156);
+    border-top-color: greenyellow;background-color: transparent;
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  animation: anime 1s infinite;
+  display: none;
+}
+@keyframes anime{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}

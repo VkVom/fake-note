@@ -30,6 +30,15 @@ function checkNote() {
     const fileInput = document.getElementById('inp');
     const file = fileInput.files[0];
     const reader = new FileReader();
+    const ld1=document.getElementById("ld");
+    b = b *-1
+    if(b==-1){
+      ld1.style.display="block"; 
+    }
+    else{
+       ld1.style.display="none";
+    }
+
 
     reader.onload = function(e) {
         // Create an image element and set its source to the uploaded image
