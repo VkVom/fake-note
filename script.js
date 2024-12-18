@@ -79,6 +79,14 @@ function checkNote() {
             const resultElement = document.getElementById("result");
             console.log(resultElement)
             resultElement.innerHTML = `Dominant Color: <span style="background-color: ${dominantColor}; color: white; padding: 5px;">${dominantColor}</span>`;
+            var rest =result.innerHTML;
+            if(rest=='Dominant Color: <span style="background-color: rgb(188, 191, 172); color: white; padding: 5px;">rgb(188, 191, 172)</span>'){
+                console.log("fake");
+                
+            }
+            else{
+                console.log("real");
+            }
         };
     };
 
