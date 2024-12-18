@@ -73,7 +73,7 @@ html,body{
     font-weight: 900;
 }
 
-button:hover{
+button:active{
     color: black;
     background-color: greenyellow;
     border: 2px solid black;
