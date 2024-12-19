@@ -15,6 +15,7 @@ const d = document.querySelector('#c2');
     b = b *-1
     if(b==-1){
       d.style.display="block"; 
+      
     }
     else{
        d.style.display="none";
@@ -31,14 +32,14 @@ function checkNote() {
     const file = fileInput.files[0];
     const reader = new FileReader();
     const ld1=document.getElementById("ld");
-    b = b *-1
-    if(b==-1){
+   
       ld1.style.display="block"; 
-    }
-    else{
+   function sett1(){
        ld1.style.display="none";
-    }
-
+       outp1.style.display="block";
+   }
+   setTimeout(sett1,5000);
+  
 
     reader.onload = function(e) {
         // Create an image element and set its source to the uploaded image
@@ -80,15 +81,28 @@ function checkNote() {
             console.log(resultElement)
             resultElement.innerHTML = `Dominant Color: <span style="background-color: ${dominantColor}; color: white; padding: 5px;">${dominantColor}</span>`;
             var rest =result.innerHTML;
-            if(rest=='Dominant Color: <span style="background-color: rgb(188, 191, 172); color: white; padding: 5px;">rgb(188, 191, 172)</span>'){
-                console.log("fake");
+            outp1=document.getElementById("outp");
+            
+                if(rest=='Dominant Color: <span style="background-color: rgb(188, 191, 172); color: white; padding: 5px;">rgb(188, 191, 172)</span>'){
+                    outp.innerHTML="The Detected Note is Fake";
+                    
+                    
+                    
+                }
+                else{
+                    outp.innerHTML="The Detected Note is Real";
+
                 
-            }
-            else{
-                console.log("real");
-            }
+                }
+            
+          
+            
+        
         };
     };
+    
+            
+    
 
     reader.readAsDataURL(file); // Read the image file as a data URL
 }
